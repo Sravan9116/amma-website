@@ -475,3 +475,13 @@ footer p {
     margin: 20px auto;
     max-width: 800px;
 }
+
+.card img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 18px rgba(134, 21, 59, 0.1);
+    transition: transform .35s, box-shadow .35s;
+}
