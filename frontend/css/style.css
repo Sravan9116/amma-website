@@ -244,6 +244,7 @@ nav a:hover::after {
     padding: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 50px;
 }
 
 .card:hover {
@@ -425,4 +426,52 @@ footer {
     .image-slider img {
         height: 420px;
     }
+}
+
+
+/* Style for paragraph with inline links */
+footer p a {
+    color: #fff;
+    /* deep maroon (matches your theme) */
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 6px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add underline animation effect */
+footer p a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #86153b;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect */
+footer p a:hover {
+    color: #86153b;
+    background: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px #ddd;
+    transform: translateY(-2px);
+}
+
+footer p a:hover::after {
+    width: 100%;
+}
+
+/* Style for the entire paragraph */
+footer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
 }
