@@ -6,6 +6,57 @@
     <title>Books & Publications</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
+
+    <style>
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #86153b;
+            margin-bottom: 15px;
+        }
+
+        .book-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fafafa;
+        }
+
+        .book-box img {
+            width: 160px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .book-details {
+            padding: 15px;
+        }
+
+        .book-details h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .book-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,26 +68,93 @@
             <nav><a href="index.html">Home</a></nav>
         </div>
     </header>
-    <main class="container">
-        <section class="section fade-in">
-            <h2>Books by Amma</h2>
-            <p>List notable books, translations, and publications — with short descriptions and links to read or
-                purchase (if applicable).</p>
+    <div class="container">
+        <section>
+            <h2>Spiritual Discourses & Teachings</h2>
+
+            <div class="book-box">
+                <img src="assets/images/Akc.jpg" alt="Awaken Children">
+                <div class="book-details">
+                    <h3>Awaken, Children! (Vol. 1–7)</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> A seven-volume series of Amma’s early life, divine experiences, and
+                        teachings.</p>
+                </div>
+            </div>
+
+            <div class="book-box">
+                <img src="assets/images/Afh.jpg" alt="From Amma's Heart">
+                <div class="book-details">
+                    <h3>From Amma’s Heart</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Center, USA</p>
+                    <p><strong>Description:</strong> A collection of Amma’s guidance on life, spirituality, and
+                        compassion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="book-box">
+                <img src="assets/images/Alead.jpeg" alt="Lead Us to the Light">
+                <div class="book-details">
+                    <h3>Lead Us to the Light</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> Spiritual questions and answers with Amma, full of wisdom and
+                        practical
+                        advice.</p>
+                </div>
+            </div>
+
         </section>
 
-        <section class="section grid fade-in">
-            <div class="card">
-                <h3>Book Title 1</h3>
-                <p class="meta">Short blurb</p>
-                <p>Short description.</p>
+        <section>
+            <h2>Devotional Hymns & Bhajans</h2>
+
+            <div class="book-box">
+                <img src="assets/images/A108.jpeg" alt="108 Divine Names of Amma">
+                <div class="book-details">
+                    <h3>108 Divine Names of Amma</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> Chanting book of Amma’s 108 names with meanings and significance.
+                    </p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Book Title 2</h3>
-                <p class="meta">Short blurb</p>
-                <p>Short description.</p>
+
+            <div class="book-box">
+                <img src="assets/images/Abha.jpg" alt="Bhajanamritam">
+                <div class="book-details">
+                    <h3>Bhajanamritam (Volumes)</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> Collections of devotional songs (bhajans) composed by Amma and her
+                        disciples.</p>
+                </div>
             </div>
+
         </section>
-    </main>
+
+        <section>
+            <h2>Wisdom & Daily Life Guidance</h2>
+
+            <div class="book-box">
+                <img src="assets/images/Alive.jpeg" alt="Living in Harmony">
+                <div class="book-details">
+                    <h3>Living in Harmony</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> Amma’s teachings on balancing spiritual life and daily
+                        responsibilities.</p>
+                </div>
+            </div>
+
+            <div class="book-box">
+                <img src="assets/images/Aperla.jpeg" alt="Amma's Pearls of Wisdom">
+                <div class="book-details">
+                    <h3>Amma’s Pearls of Wisdom</h3>
+                    <p><strong>Publisher:</strong> Mata Amritanandamayi Math</p>
+                    <p><strong>Description:</strong> Short, inspirational sayings and life lessons from Amma.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
     <footer>© 2025 Tribute</footer>
 </body>
 
