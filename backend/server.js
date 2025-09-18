@@ -17,6 +17,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/experiences", experienceRoutes);
 app.use("/api/donate", donateRoutes);
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
+
