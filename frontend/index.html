@@ -8,9 +8,115 @@
     <script defer src="js/script.js"></script>
     <link rel="icon" href="assets/images/ml.png" type="image/x-icon">
     <link rel="icon" href="assets/images/ml.png" type="image/png">
+    <style>
+        .video-section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+        }
+
+        .video-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-wrapper video {
+            width: 80%;
+            max-width: 900px;
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+            opacity: 0.95;
+        }
+
+        .video-overlay-text {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: bottom center;
+            color: #86153b;
+            background: transparent;
+            padding: 20px 30px;
+            border-radius: 12px;
+            width: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        .video-overlay-text h1 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            background: #eee;
+            text-align: botttom center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .video-overlay-text p {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-align: bottom center;
+            color: #f8f8f8;
+        }
+
+        /* Exit animation for video */
+        .video-section.finished {
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+        }
+
+        /* Exit animation for text */
+        .video-overlay-text.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+            justify-content: center;
+        }
+
+        /* Keyframes for text */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
 </head>
 
+<section class="video-section">
+    <div class="video-wrapper">
+        <video autoplay muted>
+            <source src="assets/videos/Amma.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-text">
+            <h1>🌸 Celebrating Amma's Life & Legacy 🌸</h1>
+            <p>Love • Service • Compassion</p>
+        </div>
+    </div>
+</section>
+
+
 <body>
+
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -170,6 +276,25 @@
         </p>
         <p>© 2025 Tribute — Amrita Vishwa Vidyapeetham</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videoSection = document.querySelector(".video-section");
+            const overlayText = document.querySelector(".video-overlay-text");
+
+            // Hide text after 5 seconds
+            setTimeout(() => {
+                overlayText.classList.add("hidden");
+            }, 5000);
+
+            // Hide video section completely after 40 seconds
+            setTimeout(() => {
+                videoSection.classList.add("finished");
+            }, 60000);
+        });
+
+
+    </script>
 </body>
 
 </html>
