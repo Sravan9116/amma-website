@@ -101,21 +101,24 @@
     </style>
 </head>
 
-<section class="video-section">
-    <div class="video-wrapper">
-        <video autoplay muted>
-            <source src="assets/videos/Amma.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay-text">
-            <h1>🌸 Celebrating Amma's Life & Legacy 🌸</h1>
-            <p>Love • Service • Compassion</p>
-        </div>
-    </div>
-</section>
-
-
 <body>
+
+    <section class="video-section">
+        <div class="video-wrapper">
+            <!-- Close button -->
+            <button class="video-close">&times;</button>
+
+            <video autoplay muted>
+                <source src="assets/videos/Amma.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="video-overlay-text">
+                <h1>🌸 Celebrating Amma's Life & Legacy 🌸</h1>
+                <p>Love • Service • Compassion</p>
+            </div>
+        </div>
+    </section>
 
     <header>
         <div class="header-inner">
@@ -281,17 +284,32 @@
         document.addEventListener("DOMContentLoaded", () => {
             const videoSection = document.querySelector(".video-section");
             const overlayText = document.querySelector(".video-overlay-text");
+            const closeBtn = document.querySelector(".video-close");
+            const videoWrapper = document.querySelector(".video-wrapper");
 
             // Hide text after 5 seconds
             setTimeout(() => {
                 overlayText.classList.add("hidden");
             }, 5000);
 
-            // Hide video section completely after 40 seconds
+            // Auto-hide video after 60 seconds
             setTimeout(() => {
                 videoSection.classList.add("finished");
             }, 60000);
+
+            // Close video when clicking the "X"
+            closeBtn.addEventListener("click", () => {
+                videoSection.classList.add("finished");
+            });
+
+            // Close video when clicking outside the video wrapper
+            videoSection.addEventListener("click", (e) => {
+                if (!videoWrapper.contains(e.target)) {
+                    videoSection.classList.add("finished");
+                }
+            });
         });
+
 
 
     </script>

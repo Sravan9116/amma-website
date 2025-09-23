@@ -488,3 +488,23 @@ footer p {
     box-shadow: 0 6px 18px rgba(134, 21, 59, 0.1);
     transition: transform .35s, box-shadow .35s;
 }
+
+.video-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    padding: 6px 12px;
+    z-index: 1001;
+    transition: background 0.3s ease;
+}
+
+.video-close:hover {
+    background: rgba(134, 21, 59, 0.8);
+}
